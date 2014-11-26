@@ -1,0 +1,38 @@
+
+<head>                                                                                                                          
+  <title>jubo-shell</title>
+</head>
+
+<body>
+  {{> terminal}}
+</body>
+
+<template name="terminal">
+  <div class="container">
+    <div class="row">
+  <div class="panel panel-primary terminal">
+      {{> input}}
+      {{> buffer}}
+  </div>
+    </div>
+  </div>
+</template>
+
+<template name="input">
+  <div class="panel-header">
+    <div class="well well-sm" >
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="dollar-ui">$</span>
+        <input type="text" class="form-control" id="cmd">
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="buffer">
+  <div class="panel-body">
+    <pre>{{ output }}</pre>
+  </div>
+</template>
+
+
