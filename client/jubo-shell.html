@@ -10,29 +10,31 @@
 <template name="terminal">
   <div class="container">
     <div class="row">
-  <div class="panel panel-primary terminal">
-      {{> input}}
-      {{> buffer}}
-  </div>
+      <div class="col-xs-12 col-sm-6 col-md-8"> 
+          {{> input}}
+      </div>
     </div>
+
+    {{> buffer}}
+    
   </div>
 </template>
 
 <template name="input">
-  <div class="panel-header">
-    <div class="well well-sm" >
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon" id="dollar-ui">$</span>
+      <div class="input-group">
         <input type="text" class="form-control" id="cmd">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Run</button>
+        </span>
       </div>
-    </div>
-  </div>
 </template>
 
 <template name="buffer">
-  <div class="panel-body">
-    <pre>{{ output }}</pre>
-  </div>
+  <div class="row" id="buffer">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <pre>{{ output }}</pre>
+      </div>
+    </div>
 </template>
 
 
