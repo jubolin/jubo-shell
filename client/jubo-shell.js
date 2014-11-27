@@ -10,6 +10,18 @@
             +"       Max output buffer is 200*1024." 
 
   }
+  
+  Template.input.events({
+    'click button': function(evt) {
+    var cmd  = $('#cmd').val();
+        console.log('exec: '+cmd );
+        Meteor.call('jsh', cmd, function (err, data) {
+          console.log("output:",data);
+          $('#cmd').val('');
+          Session.set('output', data );
+        });
+    }
+  });
 
   Template.input.events({
 
