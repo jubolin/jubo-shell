@@ -1,36 +1,29 @@
-
 <head>                                                                                                                          
   <title>jubo-shell</title>
 </head>
 
 <body>
-  {{> terminal}}
+  <div class="container">
+    {{> input}}
+    {{> buffer}}
+  </div>
 </body>
 
-<template name="terminal">
-  <div class="container">
-    <div class="row">
-          {{> input}}
-    </div>
-
-    {{> buffer}}
-    
-  </div>
-</template>
-
 <template name="input">
-      <div class="input-group">
-        <input type="text" class="form-control" id="cmd">
-        <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">Run</button>
-        </span>
-      </div>
+  <div class="row">
+    <div class="input-group">
+      <input type="text" class="form-control" id="cmd">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">Run</button>
+      </span>
+    </div>
+  </div>
 </template>
 
 <template name="buffer">
   <div class="row" id="buffer">
-        <pre>{{ output }}</pre>
-    </div>
+    <pre>{{ output }}</pre>
+  </div>
 </template>
 
 
