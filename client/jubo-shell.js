@@ -18,10 +18,8 @@ Template.input.events({
       $('#cmd').val('');
       Session.set('output', data );
     });
-  }
-});
+  },
 
-Template.input.events({
   'keypress input#cmd': function (evt) {
     if (evt.which === 13) { // enter key
       var cmd  = $('#cmd').val();
@@ -32,6 +30,5 @@ Template.input.events({
     }
   }
 });
-
 
 
